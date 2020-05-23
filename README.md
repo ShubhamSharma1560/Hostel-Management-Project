@@ -9,8 +9,9 @@ Firstly put whole folder(gkvhms) in htdocs folder of XAMPP and then
 
 IMPORT gkvhms.sql FILE IN DATABASE AFTER CREATING gkvhms DATABASE.
 DATABASE NAME: gkvhms
-USE ADMIN USERNAME: shubham
-USE PASSWORD : sharma
+FOR ADMIN USERNAME:contact shubham.sharma1560@gmail.com
+
+FOR ADMIN PASSWORD : Contact shubham.sharma1560@gmail.com
  THEN ENJOY !
  
  TO CREATE THIS PROJECT  IT TAKES 6 DAYS OF CONTINUOUS WORK . VERY HARDWORKING PROJECT
