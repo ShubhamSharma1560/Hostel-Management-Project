@@ -3,11 +3,12 @@ PHP Project
 IT TELLS THAT IN DIGITAL WORLD HOW YOU CAN MANAGE STUDENTS ONLINE AND HOW YOU CAN SOLVE PROBLEMS.
 Prerequisites For Using This Project
 
-DATABASE NAME: gkvhms
+Firstly put whole folder(gkvhms) in htdocs folder of XAMPP and then
+
 
 
 IMPORT gkvhms.sql FILE IN DATABASE AFTER CREATING gkvhms DATABASE.
-
+DATABASE NAME: gkvhms
 USE ADMIN USERNAME: shubham
 USE PASSWORD : sharma
  THEN ENJOY !
