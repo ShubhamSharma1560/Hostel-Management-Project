@@ -89,7 +89,7 @@ CREATE TABLE `complaint` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `employee`
+-- Table Structure for table `employee`
 --
 
 CREATE TABLE `employee` (
