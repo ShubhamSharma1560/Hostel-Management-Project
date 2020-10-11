@@ -1,23 +1,14 @@
 <?php
 session_start();
 if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
-    header("location : /gkvhms/official/login.php");
-    exit;
+    echo "<script type='text/javascript'>window.location.href = '../official/login.php';</script>";
+    exit();
 }
-
-$servername="localhost";
-$username="root";
-$password="";
-$database="gkvhms";
-$conn = mysqli_connect($servername,$username,$password,$database);
-if(!$conn)
-{
-  die("Sorry connection to database is not established:".mysqli_connect_error());
-}
-else{
+ //   connecting to databse
+ include('../connection.php');
+ $conn = OpenCon();
   $query="SELECT `SerialNo` , `FirstName` , `LastName` , `PermanentAddress`,`CurrentAddress` ,`Post`,`City`,`State`,`Email`, `DOB` ,`Salary`, `Contact`,`Category` ,`Gender`,`Hostel` FROM `employee`";
   $result=mysqli_query($conn,$query);
-}
 ?>
 
 <!doctype html>
@@ -98,7 +89,7 @@ else{
                 </div>
                 <hr>
                 <div class="list-group">
-                    <a href="" class="list-group-item active">Other Details</a>
+                    <a class="list-group-item active">Other Details</a>
                     <a href="/gkvhms/admin/studentlist.php" class="list-group-item">Student Details</a>
                     <a href="/gkvhms/admin/Allotment.php" class="list-group-item">Hostelers Details</a>
                     <a href="/gkvhms/admin/employeelist.php"class="list-group-item bg-warning">Employee Detail</a>

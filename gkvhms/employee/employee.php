@@ -1,8 +1,8 @@
 <?php
 session_start();
 if(!isset($_SESSION['signedin']) || $_SESSION['signedin']!=true){
-    header("location : /gkvhms/official/employeelogin.php");
-    exit;
+  echo "<script type='text/javascript'>window.location.href = '../official/employeelogin.php';</script>";
+  exit();
 }
 ?>
 <!doctype html>
@@ -100,20 +100,15 @@ if(!isset($_SESSION['signedin']) || $_SESSION['signedin']!=true){
       <img src="../images/emp1.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title" id="home">Total Student Alloted Hostel</h5>
-        <p class="card-text" style="text-align:center; font-size: 3rem; color: red; font-weight:bold;"><?php $servername="localhost";
-$username="root";
-$password="";
-$database="gkvhms";
-$conn = mysqli_connect($servername,$username,$password,$database);
-if(!$conn)
-{
-  die("Sorry connection to database is not established:".mysqli_connect_error());
-}
-else{
+        <p class="card-text" style="text-align:center; font-size: 3rem; color: red; font-weight:bold;">
+
+<?php  //   connecting to databse
+    include('../connection.php');
+    $conn = OpenCon();
   $query=mysqli_query($conn,"SELECT COUNT(*) as total From `allotedstudent`");
   $result=mysqli_fetch_assoc($query);
   echo $result['total'];
-}?></p>
+?></p>
       </div>
     </div>
   </div>
@@ -123,20 +118,10 @@ else{
       <div class="card-body">
         <h5 class="card-title">Total Suggestion given by Hostelers</h5>
         <p class="card-text" style="text-align:center; font-size: 3rem; color: red; font-weight:bold;">
-        <?php $servername="localhost";
-$username="root";
-$password="";
-$database="gkvhms";
-$conn = mysqli_connect($servername,$username,$password,$database);
-if(!$conn)
-{
-  die("Sorry connection to database is not established:".mysqli_connect_error());
-}
-else{
+        <?php
   $query=mysqli_query($conn,"SELECT COUNT(*) as total From `suggestion`");
   $result=mysqli_fetch_assoc($query);
   echo $result['total'];
-}
 ?>
 </p>
       </div>
@@ -148,20 +133,11 @@ else{
       <div class="card-body">
         <h5 class="card-title">Total Hostelers Complaints</h5>
         <p class="card-text" style="text-align:center; font-size: 3rem; color: red; font-weight:bold;">
-        <?php $servername="localhost";
-$username="root";
-$password="";
-$database="gkvhms";
-$conn = mysqli_connect($servername,$username,$password,$database);
-if(!$conn)
-{
-  die("Sorry connection to database is not established:".mysqli_connect_error());
-}
-else{
+        <?php
   $query=mysqli_query($conn,"SELECT COUNT(*) as total From `complaint`");
   $result=mysqli_fetch_assoc($query);
   echo $result['total'];
-}?>
+?>
 </p>
       </div>
     </div>

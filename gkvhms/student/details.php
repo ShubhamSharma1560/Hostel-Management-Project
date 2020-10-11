@@ -2,8 +2,8 @@
 session_start();
 if(!isset($_SESSION['login']) || $_SESSION['login']!=true)
 {
-    header("location : /gkvhms/official/studentlogin.php");
-    exit;
+    echo "<script type='text/javascript'>window.location.href = '../official/studentlogin.php';</script>";
+    exit();
 }
 ?>
 
@@ -116,20 +116,11 @@ if(!isset($_SESSION['login']) || $_SESSION['login']!=true)
                 <div class="card">
                 <h1 style="color:blue;background-color:skyblue; text-align:center;padding:10px 5px;"id="holiday"> Your Details</h1>
             <?php
-            $servername="localhost";
-            $username="root";
-            $password="";
-            $database="gkvhms";
-            $conn = mysqli_connect($servername,$username,$password,$database);
-            if(!$conn)
-            {
-              die("Sorry connection to database is not established:".mysqli_connect_error());
-            }
-            else
-            {
+            //   connecting to databse
+    include('../connection.php');
+    $conn = OpenCon();
                 $query="SELECT `SerialNo`,`FirstName`,`LastName`,`FatherName`,`Address`,`ParentMobNo`,`Email`,`DOB`,`Contact`,`Category`,`Marks`,`Username`,`Branch`,`YearOfStudy`,`Hostel` FROM `allotedstudent` where `Username`= '{$_SESSION['username']}'";
                 $result=mysqli_query($conn,$query);
-            }
             ?>
         <table class="table table-sm table-responsive table-hover table-secondary table-bordered">
             <thead>

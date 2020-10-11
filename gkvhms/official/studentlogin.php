@@ -1,18 +1,10 @@
 <?php
  $login=false;
 if($_SERVER["REQUEST_METHOD"]=="POST")
- { 
-    $servername="localhost";
-    $username="root";
-    $password="";
-    $database="gkvhms";
-    $conn = mysqli_connect($servername,$username,$password,$database);
-    if(!$conn)
-    {
-        die("Sorry connection to database is not established:".mysqli_connect_error());
-    }
-    else
-    { 
+ {
+      //   connecting to databse
+    include('../connection.php');
+    $conn = OpenCon();
         $Username=$_POST['username'];
         $Password=$_POST['password'];
       $Password=md5($Password);
@@ -31,7 +23,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
      {
         echo "<script>alert('Error! Invalid Credentials Please Enter Valid Username Or Password ! ');window.location='/gkvhms/official/studentlogin.php'</script>";
      }
-    }
+    
  }
  ?>
 <!doctype html>

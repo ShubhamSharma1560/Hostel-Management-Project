@@ -1,8 +1,9 @@
 <?php
 session_start();
-if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
-    header("location : /gkvhms/official/login.php");
-    exit;
+if(!isset($_SESSION['loggedin']))
+{
+  echo "<script type='text/javascript'>window.location.href = '../official/login.php';</script>";
+    exit();
 }
 ?>
 <!doctype html>
@@ -91,7 +92,7 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
                 </div>
                 <hr>
                 <div class="list-group">
-                    <a href="" class="list-group-item active">Other Details</a>
+                    <a class="list-group-item active">Other Details</a>
                     <a href="/gkvhms/admin/studentlist.php" class="list-group-item">Registered Student Details</a>
                     <a href="/gkvhms/admin/Allotment.php" class="list-group-item">Hostelers Details</a>
                     <a href="/gkvhms/admin/employeelist.php"class="list-group-item">Employee Detail</a>
@@ -106,20 +107,15 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
       <img src="../images/stgroup1.jpg" style="height:15rem;" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Total Employee in Hostel</h5>
-        <p class="card-text" style="text-align:center; font-size: 3rem; color: red; font-weight:bold;"><?php $servername="localhost";
-$username="root";
-$password="";
-$database="gkvhms";
-$conn = mysqli_connect($servername,$username,$password,$database);
-if(!$conn)
-{
-  die("Sorry connection to database is not established:".mysqli_connect_error());
-}
-else{
+        <p class="card-text" style="text-align:center; font-size: 3rem; color: red; font-weight:bold;">
+
+<?php  
+//   connecting to databse
+    include('../connection.php');
+    $conn = OpenCon();
   $query=mysqli_query($conn,"SELECT COUNT(*) as total From `employee`");
   $result=mysqli_fetch_assoc($query);
   echo $result['total'];
-}
 ?>
 </p>
       </div>
@@ -130,20 +126,13 @@ else{
       <img src="../images/registration.jpg" style="height:15rem;" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Total Student Registered</h5>
-        <p class="card-text" style="text-align:center; font-size: 3rem; color: red; font-weight:bold;"><?php $servername="localhost";
-$username="root";
-$password="";
-$database="gkvhms";
-$conn = mysqli_connect($servername,$username,$password,$database);
-if(!$conn)
-{
-  die("Sorry connection to database is not established:".mysqli_connect_error());
-}
-else{
+        <p class="card-text" style="text-align:center; font-size: 3rem; color: red; font-weight:bold;">
+        
+<?php  
+
   $query=mysqli_query($conn,"SELECT COUNT(*) as total From `registration`");
   $result=mysqli_fetch_assoc($query);
   echo $result['total'];
-}
 ?>
 </p>
       </div>
@@ -154,20 +143,15 @@ else{
       <img src="../images/emp1.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Total Student Alloted Hostel</h5>
-        <p class="card-text" style="text-align:center; font-size: 3rem; color: red; font-weight:bold;"><?php $servername="localhost";
-$username="root";
-$password="";
-$database="gkvhms";
-$conn = mysqli_connect($servername,$username,$password,$database);
-if(!$conn)
-{
-  die("Sorry connection to database is not established:".mysqli_connect_error());
-}
-else{
+        <p class="card-text" style="text-align:center; font-size: 3rem; color: red; font-weight:bold;">
+
+<?php 
   $query=mysqli_query($conn,"SELECT COUNT(*) as total From `allotedstudent`");
   $result=mysqli_fetch_assoc($query);
   echo $result['total'];
-}?></p>
+?>
+
+</p>
       </div>
     </div>
   </div>
@@ -176,20 +160,15 @@ else{
       <img src="../images/doubt.jpg" style="height:15rem;" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Total Queries Asked By Peoples</h5>
-        <p class="card-text" style="text-align:center; font-size: 3rem; color: red; font-weight:bold;"><?php $servername="localhost";
-$username="root";
-$password="";
-$database="gkvhms";
-$conn = mysqli_connect($servername,$username,$password,$database);
-if(!$conn)
-{
-  die("Sorry connection to database is not established:".mysqli_connect_error());
-}
-else{
+        <p class="card-text" style="text-align:center; font-size: 3rem; color: red; font-weight:bold;">
+        
+<?php 
   $query=mysqli_query($conn,"SELECT COUNT(*) as total From `query`");
   $result=mysqli_fetch_assoc($query);
   echo $result['total'];
-}?></p>
+
+?>
+</p>
       </div>
     </div>
   </div>
@@ -198,20 +177,13 @@ else{
       <img src="../images/query.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Total Suggestion given by Hostelers</h5>
-        <p class="card-text" style="text-align:center; font-size: 3rem; color: red; font-weight:bold;"><?php $servername="localhost";
-$username="root";
-$password="";
-$database="gkvhms";
-$conn = mysqli_connect($servername,$username,$password,$database);
-if(!$conn)
-{
-  die("Sorry connection to database is not established:".mysqli_connect_error());
-}
-else{
+        <p class="card-text" style="text-align:center; font-size: 3rem; color: red; font-weight:bold;">
+        
+<?php 
   $query=mysqli_query($conn,"SELECT COUNT(*) as total From `suggestion`");
   $result=mysqli_fetch_assoc($query);
   echo $result['total'];
-}
+
 ?>
 </p>
       </div>
@@ -223,20 +195,12 @@ else{
       <div class="card-body">
         <h5 class="card-title">Total Hostelers Complaints</h5>
         <p class="card-text" style="text-align:center; font-size: 3rem; color: red; font-weight:bold;">
-        <?php $servername="localhost";
-$username="root";
-$password="";
-$database="gkvhms";
-$conn = mysqli_connect($servername,$username,$password,$database);
-if(!$conn)
-{
-  die("Sorry connection to database is not established:".mysqli_connect_error());
-}
-else{
+<?php 
   $query=mysqli_query($conn,"SELECT COUNT(*) as total From `complaint`");
   $result=mysqli_fetch_assoc($query);
   echo $result['total'];
-}?>
+
+?>
 </p>
       </div>
     </div>

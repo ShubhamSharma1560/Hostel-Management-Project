@@ -84,17 +84,9 @@ if($_SERVER['REQUEST_METHOD']=='POST')
     $Branch=$_POST['branch'];
     $Year=$_POST['year'];
     $Hostel=$_POST['hostel'];
-//   connecting to databse
-$servername="localhost";
-$username="root";
-$password="";
-$database="gkvhms";
-$conn = mysqli_connect($servername,$username,$password,$database);
-if(!$conn)
-{
-  die("Sorry connection to database is not established:".mysqli_connect_error());
-}
-else{
+    //   connecting to databse
+    include('../connection.php');
+    $conn = OpenCon();
     $existsql="SELECT * FROM `registration` where Username='$Username'";
     $sqlresult=mysqli_query($conn,$existsql);
     $numExistRows=mysqli_num_rows($sqlresult);
@@ -107,7 +99,8 @@ else{
         </button>
       </div>'; 
     }
-    else{
+    else
+    {
     // submitting to database
     $Password=md5($Password);
     $sql="INSERT INTO `registration`(`FirstName`, `LastName`, `FatherName`, `Address`, `ParentMobNo`, `Email`, `DOB`, `Contact`, `Category`, `Marks`, `Username`, `passcode`, `Branch`, `YearOfStudy`, `Hostel`)  VALUES('$FirstName','$LastName','$FatherName','$Address','$ParentMob','$Email','$DOB','$Contact','$Category','$Marks','$Username','$Password','$Branch','$Year','$Hostel')";
@@ -130,7 +123,6 @@ else{
         }
   }
 }
-}
 ?>
     
     <div class="container-fluid" style="overflow:auto; background-color:skyblue;">
@@ -150,8 +142,8 @@ else{
                 </div>
                 <hr>
                 <div class="list-group">
-                    <a href="/gkvhms/admin/admin.php" class="list-group-item active" >Only Admin</a>
-                    <a href="/gkvhms/admin/studentlist.php" class="list-group-item " > Student List</a>
+                    <a class="list-group-item active" >Only Admin Access</a>
+                    <a href="/gkvhms/admin/studentlist.php" class="list-group-item " > Student Manage</a>
                     <a href="/gkvhms/admin/admin.php" class="list-group-item" >Employee Manage</a>
                 </div>
             </div>
@@ -224,12 +216,12 @@ else{
     <footer style="margin-top:10px; border-top: solid black;">
         <h5 style="text-align: center;">Copyright © 2020 Gurukula Kangri Vishwavidyalaya. All rights reserved</h3><br>
             <a style="margin-left: 50%;" href="https://www.facebook.com/gkvharidwar" ><img
-                    style="height: 30px; border-radius: 50px;" src="../gkvhms/images/facebook'.png" alt="facebook"></a>
+                    style="height: 30px; border-radius: 50px;" src="../images/facebook'.png" alt="facebook"></a>
             <a style="margin-left: 2%;"
                 href="https://www.linkedin.com/authwall?trk=gf&trkInfo=AQFEcn0EYGoRwwAAAXIE2hKgc_fzaTBXkuUUdKrdwkXcNK99YyaxvWSZgEx7M14ne_wo4-4tS7hFT7M9BVtF58V7yHJuASs6ORn55MZq4hJNaUcJNJ_5HmEQw0DxCFmOGYEgX-c=&originalReferer=https://www.gkv.ac.in/&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fschool%2Fgurukula-kangri-vishwavidyalaya%2F"><img
-                    style="height: 30px; border-radius: 50px;" src="../gkvhms/images/linkedin.png" alt="linkedin"></a>
+                    style="height: 30px; border-radius: 50px;" src="../images/linkedin.png" alt="linkedin"></a>
             <a style="margin-left: 2%;" href="https://twitter.com/gkvsocial"><img
-                    style="height: 30px; border-radius: 50px;" src="../gkvhms/images/twitter.png" alt="twitter"></a>
+                    style="height: 30px; border-radius: 50px;" src="../images/twitter.png" alt="twitter"></a>
     </footer>
 
     <!-- Optional JavaScript -->

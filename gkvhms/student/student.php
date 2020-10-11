@@ -2,8 +2,8 @@
 session_start();
 if(!isset($_SESSION['login']) || $_SESSION['login']!=true)
 {
-    header("location : /gkvhms/official/studentlogin.php");
-    exit;
+  echo "<script type='text/javascript'>window.location.href = '../official/studentlogin.php';</script>";
+  exit();
 }
 ?>
 

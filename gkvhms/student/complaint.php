@@ -2,8 +2,8 @@
 session_start();
 if(!isset($_SESSION['login']) || $_SESSION['login']!=true)
 {
-    header("location : /gkvhms/official/studentlogin.php");
-    exit;
+    echo "<script type='text/javascript'>window.location.href = '../official/studentlogin.php';</script>";
+    exit();
 }
 ?>
 <!doctype html>
@@ -101,17 +101,9 @@ if($_SERVER['REQUEST_METHOD']=='POST')
     $Hostel=$_POST['hostel'];
     $Phone=$_POST['phone'];
     $ComplaintDetail=$_POST['complaintdetail'];
-//   connecting to databse
-$servername="localhost";
-$username="root";
-$password="";
-$database="gkvhms";
-$conn = mysqli_connect($servername,$username,$password,$database);
-if(!$conn)
-{
-  die("Sorry connection to database is not established:".mysqli_connect_error());
-}
-else{
+ //   connecting to databse
+ include('../connection.php');
+ $conn = OpenCon();
     $existsql="SELECT * FROM `allotedstudent` where Username='$Username'";
     $sqlresult=mysqli_query($conn,$existsql);
     $numExistRows=mysqli_num_rows($sqlresult);
@@ -144,7 +136,6 @@ else{
             </button>
           </div>';
       }
-}
 }
 }
 ?>

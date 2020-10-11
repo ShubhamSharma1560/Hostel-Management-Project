@@ -1,16 +1,8 @@
 <?php
     $login=false;
-    $servername="localhost";
-    $username="root";
-    $password="";
-    $database="gkvhms";
-    $conn = mysqli_connect($servername,$username,$password,$database);
-    if(!$conn)
-    {
-        die("Sorry connection to database is not established due to:".mysqli_connect_error());
-    }
-    else
-    { if($_SERVER['REQUEST_METHOD']=='POST')
+     //   connecting to databse
+     include('../connection.php');
+     $conn = OpenCon(); if($_SERVER['REQUEST_METHOD']=='POST')
       {
        $Username= $_POST['username'];
        $Password = $_POST['password'];
@@ -31,8 +23,6 @@
         echo "<script>alert('Error! Invalid Credentials Please Enter Valid Username Or Password ! ');window.location='/gkvhms/official/employeelogin.php'</script>";
       }
      }
-    
-    }
  ?>
 <!doctype html>
 <html lang="en">
@@ -114,8 +104,8 @@
                 </div>
                 <hr>
                 <div class="list-group">
-                    <a href="/gkvhms/admin/admin.php" class="list-group-item active" >Only Admin</a>
-                    <a href="/gkvhms/admin/studentlist.php" class="list-group-item " > Student List</a>
+                    <a class="list-group-item active" >Only Admin Access</a>
+                    <a href="/gkvhms/admin/studentlist.php" class="list-group-item " > Student Manage</a>
                     <a href="/gkvhms/admin/admin.php" class="list-group-item" >Employee Manage</a>
                 </div>
             </div>

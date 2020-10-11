@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 19, 2020 at 01:26 PM
+-- Generation Time: May 18, 2020 at 02:24 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.4
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `gkvhms`
+-- Database: `id15094070_gkvhms`
 --
 
 -- --------------------------------------------------------
@@ -65,6 +65,13 @@ CREATE TABLE `allotedstudent` (
   `Hostel` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `allotedstudent`
+--
+
+INSERT INTO `allotedstudent` (`SerialNo`, `FirstName`, `LastName`, `FatherName`, `Address`, `ParentMobNo`, `Email`, `DOB`, `Contact`, `Category`, `Marks`, `Username`, `passcode`, `Branch`, `YearOfStudy`, `Hostel`) VALUES
+(1, 'SHUBHAM', 'SHARMA', 'KUSHAL KUMAR', 'VILL. DODAN P.O. BHARMOTI TEHSIL NADAUN DISTT. HAMIRPUR (HP)', '9501492122', 'shubham.sharma1560@gmail.com', '2001-03-24', '8580509997', 'GEN', '90', 'Shubham1560@', 'dad45000a912769a1c3e65ad9337d6be', 'CSE', 'Second Year', 'Pt. Lekhram Hostel');
+
 -- --------------------------------------------------------
 
 --
@@ -89,7 +96,7 @@ CREATE TABLE `complaint` (
 -- --------------------------------------------------------
 
 --
--- Table Structure for table `employee`
+-- Table structure for table `employee`
 --
 
 CREATE TABLE `employee` (
@@ -162,6 +169,13 @@ CREATE TABLE `registration` (
   `Hostel` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `registration`
+--
+
+INSERT INTO `registration` (`SerialNo`, `FirstName`, `LastName`, `FatherName`, `Address`, `ParentMobNo`, `Email`, `DOB`, `Contact`, `Category`, `Marks`, `Username`, `passcode`, `Branch`, `YearOfStudy`, `Hostel`) VALUES
+(1, 'SHUBHAM', 'SHARMA', 'KUSHAL KUMAR', 'VILL. DODAN P.O. BHARMOTI TEHSIL NADAUN DISTT. HAMIRPUR (HP)', '9501492122', 'shubham.sharma1560@gmail.com', '2001-03-24', '8580509997', 'GEN', '90', 'Shubham1560@', 'dad45000a912769a1c3e65ad9337d6be', 'CSE', 'Second Year', 'Pt. Lekhram Hostel');
+
 -- --------------------------------------------------------
 
 --
@@ -182,6 +196,13 @@ CREATE TABLE `suggestion` (
   `Response` varchar(200) NOT NULL,
   `TeacherName` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `suggestion`
+--
+
+INSERT INTO `suggestion` (`SerialNo`, `Name`, `Email`, `Username`, `Suggestion`, `Room`, `Course`, `Hostel`, `Contact`, `Brief Suggestion`, `Response`, `TeacherName`) VALUES
+(1, 'shubham', 'shubham.sharma1560@gmail.com', 'Shubham1560@', 'Food Suggestion', '30', 'cse', 'swami shardhanand  hostel', '9484864566', 'food should be hygienic and proper.', 'We Will Try Our Best', 'shubham');
 
 --
 -- Indexes for dumped tables
@@ -247,7 +268,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `allotedstudent`
 --
 ALTER TABLE `allotedstudent`
-  MODIFY `SerialNo` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `SerialNo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `complaint`
@@ -271,13 +292,13 @@ ALTER TABLE `query`
 -- AUTO_INCREMENT for table `registration`
 --
 ALTER TABLE `registration`
-  MODIFY `SerialNo` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `SerialNo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `suggestion`
 --
 ALTER TABLE `suggestion`
-  MODIFY `SerialNo` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `SerialNo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -1,20 +1,12 @@
 <?php
 session_start();
 if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
-    header("location : /gkvhms/official/login.php");
-    exit;
+    echo "<script type='text/javascript'>window.location.href = '../official/login.php';</script>";
+    exit();
 }
-$servername="localhost";
-$username="root";
-$password="";
-$database="gkvhms";
-$conn = mysqli_connect($servername,$username,$password,$database);
-if(!$conn)
-{
-  die("Sorry connection to database is not established:".mysqli_connect_error());
-}
-else
-{
+ //   connecting to databse
+ include('../connection.php');
+ $conn = OpenCon();
     if($_SERVER['REQUEST_METHOD']=='POST')
             {   $Tname=$_POST['TName'];
                 $Username=$_POST['username'];
@@ -39,5 +31,4 @@ else
                           }
                      }
              }
-    }
 ?>

@@ -1,9 +1,8 @@
 <?php
 session_start();
 if(!isset($_SESSION['login']) || $_SESSION['login']!=true)
-{
-    header("location : /gkvhms/official/studentlogin.php");
-    exit;
+{ echo "<script type='text/javascript'>window.location.href = '../official/studentlogin.php';</script>";
+    exit();
 }
 ?>
 <!doctype html>
@@ -112,21 +111,13 @@ if(!isset($_SESSION['login']) || $_SESSION['login']!=true)
                 </div>
             </div>
 <?php
-$servername="localhost";
-$username="root";
-$password="";
-$database="gkvhms";
-$conn = mysqli_connect($servername,$username,$password,$database);
-if(!$conn)
-{
-  die("Sorry connection to database is not established:".mysqli_connect_error());
-}
-else
-{    $query="SELECT * FROM `complaint` where `Username`= '{$_SESSION['username']}'";
-            $result=mysqli_query($conn,$query);
+ //connecting to databse
+ include('../connection.php');
+ $conn = OpenCon();
+  $query="SELECT * FROM `complaint` where `Username`= '{$_SESSION['username']}'";
+$result=mysqli_query($conn,$query);
 $query2="SELECT * FROM `suggestion` where `Username`= '{$_SESSION['username']}'";
-            $result2=mysqli_query($conn,$query2);
-           }
+$result2=mysqli_query($conn,$query2);
 
 ?>
  <div class="col-md-9" id="home">
@@ -151,7 +142,7 @@ $query2="SELECT * FROM `suggestion` where `Username`= '{$_SESSION['username']}'"
            <?php
               while($rows=mysqli_fetch_assoc($result))
               {
-           ?>
+             ?>
            <tr>
                <th scope="row"><?php echo $rows['SerialNo']; ?></th>
                <td><?php echo $rows['Name']; ?></td>
@@ -164,14 +155,12 @@ $query2="SELECT * FROM `suggestion` where `Username`= '{$_SESSION['username']}'"
                <td><?php echo $rows['Response']; ?></td>
                <td><?php echo $rows['TeacherName']; ?></td> 
            </tr>
-           <?php
-              }
-           ?>
+              <?php }    ?>
        </tbody>
    </table>
    <form action="/gkvhms/student/complaintdelete.php"method="post">
                <input type="text" class="form-control my-5" name="username" required placeholder="Enter Username">
-               <input type="text" name="password" class="form-control my-5" placeholder="Enter Password" required>
+               <input type="password" name="password" class="form-control my-5" placeholder="Enter Password" required>
                <button type="submit"  name ="delete" class= "btn btn-success my-3 form-control">DELETE COMPLAINT</button>
             </form>
 
@@ -195,8 +184,7 @@ $query2="SELECT * FROM `suggestion` where `Username`= '{$_SESSION['username']}'"
   <tbody>
       <?php
          while($rows=mysqli_fetch_assoc($result2))
-         {
-      ?>
+         { ?>
       <tr>
           <th scope="row"><?php echo $rows['SerialNo']; ?></th>
           <td><?php echo $rows['Name']; ?></td>
@@ -209,15 +197,13 @@ $query2="SELECT * FROM `suggestion` where `Username`= '{$_SESSION['username']}'"
           <td><?php echo $rows['Response']; ?></td> 
           <td><?php echo $rows['TeacherName']; ?></td> 
       </tr>
-      <?php
-         }
-      ?>
+      <?php  } ?>
 
   </tbody>
 </table>
 <form action="/gkvhms/student/suggestiondelete.php"method="post">
                <input type="text" class="form-control my-5" name="username" required placeholder="Enter Username">
-               <input type="text" name="password" class="form-control my-5" placeholder="Enter Password" required>
+               <input type="password" name="password" class="form-control my-5" placeholder="Enter Password" required>
                <button type="submit"  name ="delete" class= "btn btn-success my-3 form-control">DELETE Suggestion</button>
             </form>
         </div>
@@ -241,5 +227,4 @@ $query2="SELECT * FROM `suggestion` where `Username`= '{$_SESSION['username']}'"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
 </body>
-
 </html>

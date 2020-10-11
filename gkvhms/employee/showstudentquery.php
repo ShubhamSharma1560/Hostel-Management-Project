@@ -1,25 +1,16 @@
 <?php
 session_start();
 if(!isset($_SESSION['signedin']) || $_SESSION['signedin']!=true){
-    header("location : /gkvhms/official/employeelogin.php");
-    exit;
+    echo "<script type='text/javascript'>window.location.href = '../official/employeelogin.php';</script>";
+    exit();
 }
-$servername="localhost";
-$username="root";
-$password="";
-$database="gkvhms";
-$conn = mysqli_connect($servername,$username,$password,$database);
-if(!$conn)
-{
-  die("Sorry connection to database is not established:".mysqli_connect_error());
-}
-else
-{
+ //   connecting to databse
+ include('../connection.php');
+ $conn = OpenCon();
            $query="SELECT * FROM `complaint`";
             $result=mysqli_query($conn,$query);
             $query2="SELECT * FROM `suggestion`";
             $result2=mysqli_query($conn,$query2);
-           }
 ?>
 <!doctype html>
 <html lang="en">
