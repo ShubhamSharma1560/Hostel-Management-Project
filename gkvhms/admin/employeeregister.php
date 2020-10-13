@@ -16,29 +16,81 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <style>
-        *{
+        <style>
+        * {
             scroll-behavior: smooth;
             font-family: Georgia, 'Times New Roman', Times, serif;
         }
+
+        @media screen and (max-width:360px) {
+            #media {
+                display: none;
+            }
+
+            #gkv {
+                display: none;
+            }
+
+            #logo {
+                display: flex;
+                justify-content: center;
+            }
+
+        }
+
+        @media screen and (max-width:526px) {
+            #media {
+                display: none;
+            }
+
+            #gkv {
+                display: none;
+            }
+
+            #logo {
+                display: flex;
+                justify-content: center;
+            }
+
+        }
+
+        @media screen and (min-width: 527px) and (max-width:660px) {
+            #media {
+                display: none;
+            }
+
+            #logo {
+                display: none;
+            }
+
+        }
+
+        @media screen and (min-width: 661px) and (max-width:991px) {
+            #media {
+                display: none;
+            }
+        }
     </style>
-    <title>ADMIN GKV</title>
+    <title>GKV@ADMIN</title>
 </head>
 
 <body>
     <header id="header">
-        <div class="container" style="display: flex;">
-        <div class="col-lg-3 col-md-3 logo"><a href="https://www.gkv.ac.in/"><img src="../images/logo.png"></a></div>
-        <div class="col-lg-6 col-md-6 U-name text-center"><a href="https://www.gkv.ac.in/"><img src="../images/gkv-un.png"></a></div>
-        <div class="col-lg-3 col-md-3 founder text-right"><a href="https://www.gkv.ac.in/"><img src="../images/gkv-founder.png"></a></div>
+        <div class="container-fluid" style="display: flex;">
+            <div id="logo" class="col-lg-3 col-md-3 logo"><a href="https://www.gkv.ac.in/"><img
+                        src="../images/logo.png"></a></div>
+            <div id="gkv" class="col-lg-6 col-md-6 U-name text-center"><a href="https://www.gkv.ac.in/"><img
+                        src="../images/gkv-un.png"></a></div>
+            <div id="media" class="col-lg-3 col-md-3 founder text-right"><a href="https://www.gkv.ac.in/"><img
+                        src="../images/gkv-founder.png"></a></div>
         </div>
-        </header>
-    
-        <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
-          <a class="navbar-brand" href="/gkvhms/admin/admin.php" style="font-size:1.55rem;color:royalblue ;">
-              <img src="../images/GKV.jpg" width="50" height="50" class="d-inline-block rounded-circle" alt="GKV">
-                 ADMIN @SHUBHAM
-          </a>  
+    </header>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+        <a style="display: flex;" class="navbar-brand" href="/gkvhms/admin/admin.php"
+            style="font-size:1.55rem;color:royalblue ;">
+            <img src="../images/GKV.jpg" width="50" height="50" class="d-inline-block rounded-circle" alt="GKV">
+            <p style="color: blueviolet; margin: 10px;">Admin @SHUBHAM</p>
+        </a>  
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
           </button>  
@@ -117,7 +169,7 @@ if($_SERVER['REQUEST_METHOD']=='POST')
     $result=mysqli_query($conn,$sql);
     if($result){
         echo '<div class="alert-dismissible fade show alert alert-success" role="alert">
-        <strong>Success </strong> Your Registeration Has been submitted succesfully!
+        <strong>Success </strong> Employee Registeration Has been submitted succesfully!
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
@@ -138,7 +190,7 @@ if($_SERVER['REQUEST_METHOD']=='POST')
         <div class="row">
             <div class="col-md-3">
                 <div class="list-group">
-                    <a href="" class="list-group-item active navbar-dark bg-dark" id="home"><?php echo $_SESSION['username'];?> DashBoard</a>
+                    <a class="list-group-item active navbar-dark bg-danger" id="home"><?php echo $_SESSION['username'];?> DashBoard</a>
                     <a href="/gkvhms/admin/admin.php#details" class="list-group-item">Hostel Details</a>
                     <a href="/gkvhms/admin/showstudentquery.php"class="list-group-item "> Student Query Box</a>
                     <a href="/gkvhms/admin/showquery.php" class="list-group-item">Official Query Box</a>
@@ -209,7 +261,7 @@ if($_SERVER['REQUEST_METHOD']=='POST')
                                 <option value="Swami Sharadhanand Hostel">Swami Sharadhanand Hostel</option>
                                 <option value="Pt. Lekhram Hostel">Pt. Lekhram Hostel</option>
                             </select><br>
-                            <button type="submit" class="btn btn-primary form-control">REGISTER</button>
+                            <button type="submit" id="submit"class="btn btn-primary form-control">REGISTER</button>
                         </form>
                     </div>
                 </div>
@@ -217,15 +269,15 @@ if($_SERVER['REQUEST_METHOD']=='POST')
 
         </div>
     </div>
-    <footer style="margin-top:10px; border-top: solid black;">
-        <h5 style="text-align: center;">Copyright © 2020 Gurukula Kangri Vishwavidyalaya. All rights reserved</h3><br>
-            <a style="margin-left: 50%;" href="https://www.facebook.com/gkvharidwar" ><img
-                    style="height: 30px; border-radius: 50px;" src="../images/facebook'.png" alt="facebook"></a>
-            <a style="margin-left: 2%;"
-                href="https://www.linkedin.com/authwall?trk=gf&trkInfo=AQFEcn0EYGoRwwAAAXIE2hKgc_fzaTBXkuUUdKrdwkXcNK99YyaxvWSZgEx7M14ne_wo4-4tS7hFT7M9BVtF58V7yHJuASs6ORn55MZq4hJNaUcJNJ_5HmEQw0DxCFmOGYEgX-c=&originalReferer=https://www.gkv.ac.in/&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fschool%2Fgurukula-kangri-vishwavidyalaya%2F"><img
-                    style="height: 30px; border-radius: 50px;" src="../images/linkedin.png" alt="linkedin"></a>
-            <a style="margin-left: 2%;" href="https://twitter.com/gkvsocial"><img
-                    style="height: 30px; border-radius: 50px;" src="../images/twitter.png" alt="twitter"></a>
+    <footer style="margin-top:10px; border-top: solid black;border-bottom: solid black;">
+      <h5 style="text-align: center;">Copyright © 2020 Gurukula Kangri Vishwavidyalaya. All rights reserved</h5><br>
+        <a style="margin-left: 40%;" href="https://www.facebook.com/gkvharidwar"><img
+            style="height: 30px; border-radius: 50px;" src="../images/facebook'.png" alt="facebook"></a>
+        <a style="margin-left: 2%;"
+          href="https://www.linkedin.com/authwall?trk=gf&trkInfo=AQFEcn0EYGoRwwAAAXIE2hKgc_fzaTBXkuUUdKrdwkXcNK99YyaxvWSZgEx7M14ne_wo4-4tS7hFT7M9BVtF58V7yHJuASs6ORn55MZq4hJNaUcJNJ_5HmEQw0DxCFmOGYEgX-c=&originalReferer=https://www.gkv.ac.in/&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fschool%2Fgurukula-kangri-vishwavidyalaya%2F"><img
+            style="height: 30px; border-radius: 50px;" src="../images/linkedin.png" alt="linkedin"></a>
+        <a style="margin-left: 2%;" href="https://twitter.com/gkvsocial"><img style="height: 30px; border-radius: 50px;"
+            src="../images/twitter.png" alt="twitter"></a>
     </footer>
 
     <!-- Optional JavaScript -->

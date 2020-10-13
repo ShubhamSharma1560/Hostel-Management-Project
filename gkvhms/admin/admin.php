@@ -17,29 +17,95 @@ if(!isset($_SESSION['loggedin']))
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <style>
-        *{
-            scroll-behavior: smooth;
-            font-family: Georgia, 'Times New Roman', Times, serif;
-        }
-    </style>
-    <title>ADMIN GKV</title>
+        <style>
+    * {
+      scroll-behavior: smooth;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    @media screen and (max-width:360px) {
+      #media {
+        display: none;
+      }
+
+      #gkv {
+        display: none;
+      }
+
+      #logo {
+        display: flex;
+        justify-content: center;
+      }
+
+      .textsize {
+        font-size: small;
+      }
+
+    }
+
+    @media screen and (max-width:526px) {
+      #media {
+        display: none;
+      }
+
+      #gkv {
+        display: none;
+      }
+
+      #logo {
+        display: flex;
+        justify-content: center;
+      }
+
+      .textsize {
+        font-size: small;
+      }
+    }
+
+    @media screen and (min-width: 527px) and (max-width:660px) {
+      #media {
+        display: none;
+      }
+
+      #logo {
+        display: none;
+      }
+
+      .textsize {
+        font-size: medium;
+      }
+    }
+
+    @media screen and (min-width: 661px) and (max-width:991px) {
+      #media {
+        display: none;
+      }
+
+      .textsize {
+        font-size: large;
+      }
+    }
+  </style>
+    <title>GKV@ADMIN</title>
 </head>
 
 <body>
     <header id="header">
-        <div class="container" style="display: flex;">
-        <div class="col-lg-3 col-md-3 logo"><a href="https://www.gkv.ac.in/"><img src="../images/logo.png"></a></div>
-        <div class="col-lg-6 col-md-6 U-name text-center"><a href="https://www.gkv.ac.in/"><img src="../images/gkv-un.png"></a></div>
-        <div class="col-lg-3 col-md-3 founder text-right"><a href="https://www.gkv.ac.in/"><img src="../images/gkv-founder.png"></a></div>
+        <div class="container-fluid" style="display: flex;">
+            <div id="logo" class="col-lg-3 col-md-3 logo"><a href="https://www.gkv.ac.in/"><img
+                        src="../images/logo.png"></a></div>
+            <div id="gkv" class="col-lg-6 col-md-6 U-name text-center"><a href="https://www.gkv.ac.in/"><img
+                        src="../images/gkv-un.png"></a></div>
+            <div id="media" class="col-lg-3 col-md-3 founder text-right"><a href="https://www.gkv.ac.in/"><img
+                        src="../images/gkv-founder.png"></a></div>
         </div>
-        </header>
-    
-        <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
-          <a class="navbar-brand" href="/gkvhms/admin/admin.php" style="font-size:1.55rem;color:royalblue ;">
-              <img src="../images/GKV.jpg" width="50" height="50" class="d-inline-block rounded-circle" alt="GKV">
-                 ADMIN @SHUBHAM
-          </a>  
+    </header>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+        <a style="display: flex;" class="navbar-brand" href="/gkvhms/admin/admin.php"
+            style="font-size:1.55rem;color:royalblue ;">
+            <img src="../images/GKV.jpg" width="50" height="50" class="d-inline-block rounded-circle" alt="GKV">
+            <p style="color: blueviolet; margin: 10px;">Admin @SHUBHAM</p>
+        </a>  
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
           </button>  
@@ -81,7 +147,7 @@ if(!isset($_SESSION['loggedin']))
         <div class="row">
             <div class="col-md-3">
                 <div class="list-group">
-                    <a href="" class="list-group-item active navbar-dark bg-dark" id="home"> <?php echo $_SESSION['username'];?> DashBoard</a>
+                    <a  class="list-group-item active navbar-dark bg-danger" id="home"> <?php echo $_SESSION['username'];?> DashBoard</a>
                     <a href="/gkvhms/admin/admin.php#details" class="list-group-item">Hostel Details</a>
                     <a href="/gkvhms/admin/showstudentquery.php"class="list-group-item"> Student Query Box</a>
                     <a href="/gkvhms/admin/showquery.php" class="list-group-item">Official Query Box</a>
@@ -215,7 +281,7 @@ if(!isset($_SESSION['loggedin']))
   <img src="../images/facilities.png" class="card-img-top" alt="...">
   <div class="card-body">
     <h4 class="card-title">FACILITIES</h4>
-    <p class="card-text">Our Hostel Have Best Outside Environment With  3 Best  And Clean Parks and one big Ground For Playing Our Hostel Have clean And Green Ecosystem For Peace and Fun Join And Enjoy. Our Hostel Have Well Cleaned Bathrooms And Rooms ALso Our Hostel Have <b>WIFI CAMPUS</b> So You Can Also Enjoy Fast WIFI . Our Hostel Have Best Security In Whole State . Our Hostels Are Well Maintained And Full Secure . Students Are Fully Safe. Hostel Have <b> Biometric Attendance System </b>Also.  If In Anycase You Feel Problem We have Full Support Of teachers And University You can Contact anyone in Anytime Everyone Is free to Help Students.<b>|Learn Enjoy Happy|</b></p>
+    <p class="card-text textsize">Our Hostel Have Best Outside Environment With  3 Best  And Clean Parks and one big Ground For Playing. Our Hostel Have clean And Green Ecosystem For Peace and Fun Join And Enjoy. Our Hostel Have Well Cleaned Bathrooms And Rooms ALso Our Hostel Have <b>WIFI CAMPUS</b> So You Can Also Enjoy Fast WIFI . Our Hostel Have Best Security In Whole State . Our Hostels Are Well Maintained And Full Secure . Students Are Fully Safe. Hostel Have <b> Biometric Attendance System </b>Also.  If In Anycase You Feel Problem We have Full Support Of teachers And University You can Contact anyone in Anytime Everyone Is free to Help Students.<b>|Learn Enjoy Happy|</b></p>
     <p class="card-text"><small class="text-muted">Best Facilities in this Area</small></p>
   </div>
 </div>
@@ -268,44 +334,51 @@ if(!isset($_SESSION['loggedin']))
 </div>
 <h1 style="text-align:center;color:black;background-color: orange; padding:12px 5px;" id="notice">Notices</h1>
 <div class="row">
-<div class="col-md-4">
+<div class="col-mb-4" style="margin-left:2rem;">
                 <div class="card" style="width: 18rem;">
                     <img src="../images/notice1.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <p class="card-text">When University Annouce Something Related To Hostel We Take As Responsibilities And Manage that By Notices <br> Here This Notice Is Related To To Covid-19 So We Want To Tell YOu That Immediate Go to Your Home And Complete Hostel will Close Till Next Orders.</p>
+                      <p class="card-text">When University Annouce Something Related To Hostel We Take As Responsibilities And Manage that By Notices <br> Here This Notice Is Related To To Covid-19 So We Want To Tell You That Immediate Go to Your Home And Complete Hostel will Remain Close Till Next Orders.</p>
+                      <a class="btn btn-primary" href="/gkvhms/images/notice1.jpg" download >Download Image</a>
                     </div>
                   </div>
-                  <a href="/gkvhms/images/notice1.jpg" download style=" color: chocolate; font-size: 30px; font-weight: bold;">Download Image</a>
+                 
             </div>
-            <div class="col-md-4">
+            <div class="col-mb-4"style="margin-left:2rem;">
                 <div class="card" style="width: 18rem;">
                     <img src="../images/notice2.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                       <p class="card-text">Notice Is Related To Annual Exam Here It Tells That Annual Exam Will Held From Mid July.</p>
+                      <a class="btn btn-primary" href="/gkvhms/images/notice2.jpg" download >Download Image
+                </a>
                     </div>
                   </div>
-                  <a href="/gkvhms/images/notice2.jpg" download style="color: chocolate; font-size: 30px; font-weight: bold;">Download Image
-                </a>
+                 
             </div>
-            <div class="col-md-4">
+            <div class="col-mb-4"style="margin-left:2rem;">
                 <div class="card" style="width: 18rem;">
                     <img src="../images/notice3.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                       <p class="card-text">This Notice Is Related To College Fees . So we Provide Every Meeting Decision By Notices Here It Tells That Every Student Have To give fees of Annual Exam.</p>
+                      <a class="btn btn-primary" href="/gkvhms/images/notice3.jpg" download >Download Image
+                </a>
                     </div>
                   </div>
-                  <a href="/gkvhms/images/notice3.jpg" download style=" color: chocolate; font-size: 30px; font-weight: bold;">Download Image
-                </a>
+                 
             </div>
 </div>
-          <footer style="margin-top:10px; border-top: solid black;">
-              <h5 style="text-align: center;">Copyright © 2020 Gurukula Kangri Vishwavidyalaya. All rights reserved</h3><br>
-              <a style="margin-left: 50%;" href="https://www.facebook.com/gkvharidwa"><img style="height: 30px; border-radius: 50px;" src="../images/facebook'.png" alt="facebook"></a>
-              <a style="margin-left: 2%;" href="https://www.linkedin.com/authwall?trk=gf&trkInfo=AQFEcn0EYGoRwwAAAXIE2hKgc_fzaTBXkuUUdKrdwkXcNK99YyaxvWSZgEx7M14ne_wo4-4tS7hFT7M9BVtF58V7yHJuASs6ORn55MZq4hJNaUcJNJ_5HmEQw0DxCFmOGYEgX-c=&originalReferer=https://www.gkv.ac.in/&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fschool%2Fgurukula-kangri-vishwavidyalaya%2"><img style="height: 30px; border-radius: 50px;" src="../images/linkedin.png" alt="linkedin"></a>
-              <a style="margin-left: 2%;" href="https://twitter.com/gkvsocial"><img style="height: 30px; border-radius: 50px;" src="../images/twitter.png" alt="twitter"></a>
-          </footer>
-
-    </div>
+</div>
+<footer style="margin-top:10px; border-top: solid black;border-bottom: solid black;">
+      <h5 style="text-align: center;">Copyright © 2020 Gurukula Kangri Vishwavidyalaya. All rights reserved</h5><br>
+        <a style="margin-left: 40%;" href="https://www.facebook.com/gkvharidwar"><img
+            style="height: 30px; border-radius: 50px;" src="../images/facebook'.png" alt="facebook"></a>
+        <a style="margin-left: 2%;"
+          href="https://www.linkedin.com/authwall?trk=gf&trkInfo=AQFEcn0EYGoRwwAAAXIE2hKgc_fzaTBXkuUUdKrdwkXcNK99YyaxvWSZgEx7M14ne_wo4-4tS7hFT7M9BVtF58V7yHJuASs6ORn55MZq4hJNaUcJNJ_5HmEQw0DxCFmOGYEgX-c=&originalReferer=https://www.gkv.ac.in/&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fschool%2Fgurukula-kangri-vishwavidyalaya%2F"><img
+            style="height: 30px; border-radius: 50px;" src="../images/linkedin.png" alt="linkedin"></a>
+        <a style="margin-left: 2%;" href="https://twitter.com/gkvsocial"><img style="height: 30px; border-radius: 50px;"
+            src="../images/twitter.png" alt="twitter"></a>
+    </footer>
+   
    
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

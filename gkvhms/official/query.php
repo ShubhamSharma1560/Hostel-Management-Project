@@ -14,7 +14,7 @@ if($_SERVER['REQUEST_METHOD']=='POST')
  include('../connection.php');
  $conn = OpenCon();
     // submitting to database
-    $sql="INSERT INTO `query`(`Name`, `Email address`,`Address`, `Query Relation`,`State`,`Contact No.`,`City`, `Detailed Query`)  VALUES('$Name','$Address','$Email','$Query','$State','$Contact','$City','$Detail')";
+    $sql="INSERT INTO `query`(`Name`, `Email address`,`Address`, `Query Relation`,`State`,`Contact No.`,`City`, `Detailed Query`)  VALUES('$Name','$Email','$Address','$Query','$State','$Contact','$City','$Detail')";
     $result=mysqli_query($conn,$sql);
     if($result){
       echo "<script>alert('Success! Your Response submitted');window.location='/gkvhms/official/index.html'</script>";

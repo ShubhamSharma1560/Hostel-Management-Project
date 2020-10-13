@@ -36,28 +36,93 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <style>
-        *{
-            scroll-behavior: smooth;
-            font-family: Georgia, 'Times New Roman', Times, serif;
-        }
-    </style>
-    <title>GurukulHMS</title>
- </head>
- <body>
- <header id="header">
-        <div class="container" style="display: flex;">
-        <div class="col-lg-3 col-md-3 logo"><a href="https://www.gkv.ac.in/"><img src="../images/logo.png"></a></div>
-        <div class="col-lg-6 col-md-6 U-name text-center"><a href="https://www.gkv.ac.in/"><img src="../images/gkv-un.png"></a></div>
-        <div class="col-lg-3 col-md-3 founder text-right"><a href="https://www.gkv.ac.in/"><img src="../images/gkv-founder.png"></a></div>
-        </div>
+        <style>
+            * {
+                scroll-behavior: smooth;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+    
+            @media screen and (max-width:360px) {
+                #media {
+                    display: none;
+                }
+    
+                #gkv {
+                    display: none;
+                }
+    
+                #logo {
+                    display: flex;
+                    justify-content: center;
+                }
+                .textsize {
+            font-size: xx-small;
+          }
+    
+            }
+    
+            @media screen and (max-width:526px) {
+                #media {
+                    display: none;
+                }
+    
+                #gkv {
+                    display: none;
+                }
+    
+                #logo {
+                    display: flex;
+                    justify-content: center;
+                }
+                .textsize {
+            font-size:xx-small;
+          }
+    
+            }
+    
+            @media screen and (min-width: 527px) and (max-width:660px) {
+                #media {
+                    display: none;
+                }
+    
+                #logo {
+                    display: none;
+                }
+                .textsize {
+            font-size: small;
+          }
+    
+            }
+    
+            @media screen and (min-width: 661px) and (max-width:991px) {
+                #media {
+                    display: none;
+                }
+                .textsize {
+            font-size:medium;
+          }
+            }
+        </style>
+        <title>GurukulHMS</title>
+    </head>
+    
+    <body>
+        <header id="header">
+            <div class="container-fluid" style="display: flex;">
+                <div id="logo" class="col-lg-3 col-md-3 logo"><a href="https://www.gkv.ac.in/"><img
+                            src="../images/logo.png"></a></div>
+                <div id="gkv" class="col-lg-6 col-md-6 U-name text-center"><a href="https://www.gkv.ac.in/"><img
+                            src="../images/gkv-un.png"></a></div>
+                <div id="media" class="col-lg-3 col-md-3 founder text-right"><a href="https://www.gkv.ac.in/"><img
+                            src="../images/gkv-founder.png"></a></div>
+            </div>
         </header>
-   
         <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
-          <a class="navbar-brand" href="/gkvhms/official/index.html"  style="font-size:1.55rem;color:royalblue ;">
-              <img src="../images/GKV.jpg" width="50" height="50" class="d-inline-block rounded-circle" alt="GKV">
-                  GKV Hostel Management
-          </a>  
+            <a style="display: flex;" class="navbar-brand" href="/gkvhms/official/index.html"
+                style="font-size:1.55rem;color:royalblue ;">
+                <img src="../images/GKV.jpg" width="50" height="50" class="d-inline-block rounded-circle" alt="GKV">
+                <p style="color: blueviolet; margin: 10px;">GKV Hostel Management</p>
+            </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
           </button>  
@@ -97,7 +162,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
   <div class="row">
             <div class="col-md-3">
                 <div class="list-group">
-                    <a href="" class="list-group-item active navbar-dark bg-dark">DashBoard</a>
+                    <a class="list-group-item active navbar-dark bg-danger">DashBoard</a>
                     <a href="/gkvhms/official/login.php" class="list-group-item "> Admin Login</a>
                     <a href="/gkvhms/official/studentlogin.php"class="list-group-item bg-warning"> Student Login </a>
                     <a href="/gkvhms/official/employeelogin.php"class="list-group-item "> Employee Login </a>
@@ -128,20 +193,26 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
                             <input id="password" type="password" placeholder="ENTER PASSWORD" name="password" class="form-control"><br>
                             <button type="submit" class="btn btn-primary form-control">SIGN IN</button>
                         </form>
-                        <a href="/gkvhms/official/register.php" ><button class="bg-dark" style=" margin-left:40%;font-weight:bold;padding:10px 50px; color:white;">Register Here</button></a>
+                        <a style="display:flex; justify-content:center;" href="/gkvhms/official/register.php" ><button class="bg-dark" style=" font-weight:bold;padding:10px 50px; color:white;">Register Here</button></a>
+                        <h5 class="textsize" style="color:brown; margin-top:1rem;">If You Forgot Your Username Or Password Then Contact To administrator Immediately!</h5>
                     </div>
+                   
                 </div>
-                <h3 style="color:red;">If You Don't Remember Your Username Or Password Then Contact To administrator Immediately!</h3>
+                
             </div>
         </div>
         
     </div>
-    <footer style="margin-top:10px; border-top: solid black;">
-        <h5 style="text-align: center;">Copyright © 2020 Gurukula Kangri Vishwavidyalaya. All rights reserved</h3><br>
-        <a style="margin-left: 50%;" href="https://www.facebook.com/gkvharidwar"><img style="height: 30px; border-radius: 50px;" src="../images/facebook'.png" alt="facebook"></a>
-        <a style="margin-left: 2%;" href="https://www.linkedin.com/authwall?trk=gf&trkInfo=AQFEcn0EYGoRwwAAAXIE2hKgc_fzaTBXkuUUdKrdwkXcNK99YyaxvWSZgEx7M14ne_wo4-4tS7hFT7M9BVtF58V7yHJuASs6ORn55MZq4hJNaUcJNJ_5HmEQw0DxCFmOGYEgX-c=&originalReferer=https://www.gkv.ac.in/&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fschool%2Fgurukula-kangri-vishwavidyalaya%2F"><img style="height: 30px; border-radius: 50px;" src="../images/linkedin.png" alt="linkedin"></a>
-        <a style="margin-left: 2%;" href="https://twitter.com/gkvsocial"><img style="height: 30px; border-radius: 50px;" src="../images/twitter.png" alt="twitter"></a>
-    </footer>
+    <footer style="margin-top:10px; border-top: solid black;border-bottom: solid black;">
+        <h5 style="text-align: center;">Copyright © 2020 Gurukula Kangri Vishwavidyalaya. All rights reserved</h5><br>
+          <a style="margin-left: 40%;" href="https://www.facebook.com/gkvharidwar"><img
+              style="height: 30px; border-radius: 50px;" src="../images/facebook'.png" alt="facebook"></a>
+          <a style="margin-left: 2%;"
+            href="https://www.linkedin.com/authwall?trk=gf&trkInfo=AQFEcn0EYGoRwwAAAXIE2hKgc_fzaTBXkuUUdKrdwkXcNK99YyaxvWSZgEx7M14ne_wo4-4tS7hFT7M9BVtF58V7yHJuASs6ORn55MZq4hJNaUcJNJ_5HmEQw0DxCFmOGYEgX-c=&originalReferer=https://www.gkv.ac.in/&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fschool%2Fgurukula-kangri-vishwavidyalaya%2F"><img
+              style="height: 30px; border-radius: 50px;" src="../images/linkedin.png" alt="linkedin"></a>
+          <a style="margin-left: 2%;" href="https://twitter.com/gkvsocial"><img style="height: 30px; border-radius: 50px;"
+              src="../images/twitter.png" alt="twitter"></a>
+      </footer>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
