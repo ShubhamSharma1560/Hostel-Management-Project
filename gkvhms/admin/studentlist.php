@@ -125,7 +125,7 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="position:absolute; z-index:10;">
                        <a class="dropdown-item" href="/gkvhms/admin/showstudentquery.php">Student Queries</a>
                        <div class="dropdown-divider"></div>
-                       <a class="dropdown-item" href="/gkvhms/admin/admin.php#detail">Hostel Details</a>
+                       <a class="dropdown-item" href="/gkvhms/admin/admin.php#details">Hostel Details</a>
                     </div>
                 </li>
                 <li class="nav-item">
