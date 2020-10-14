@@ -9,180 +9,210 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <style>
-            * {
-                scroll-behavior: smooth;
-                font-family: Georgia, 'Times New Roman', Times, serif;
+    <style>
+        * {
+            scroll-behavior: smooth;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        @media screen and (max-width:360px) {
+            #media {
+                display: none;
             }
-    
-            @media screen and (max-width:360px) {
-                #media {
-                    display: none;
-                }
-    
-                #gkv {
-                    display: none;
-                }
-    
-                #logo {
-                    display: flex;
-                    justify-content: center;
-                }
-                .textsize {
-            font-size: xx-small;
-          }
-    
+
+            #gkv {
+                display: none;
             }
-    
-            @media screen and (max-width:526px) {
-                #media {
-                    display: none;
-                }
-    
-                #gkv {
-                    display: none;
-                }
-    
-                #logo {
-                    display: flex;
-                    justify-content: center;
-                }
-                .textsize {
-            font-size:xx-small;
-          }
-    
+
+            #logo {
+                display: flex;
+                justify-content: center;
             }
-    
-            @media screen and (min-width: 527px) and (max-width:660px) {
-                #media {
-                    display: none;
-                }
-    
-                #logo {
-                    display: none;
-                }
-                .textsize {
-            font-size: small;
-          }
-    
+
+            .textsize {
+                font-size: xx-small;
             }
-    
-            @media screen and (min-width: 661px) and (max-width:991px) {
-                #media {
-                    display: none;
-                }
-                .textsize {
-            font-size:medium;
-          }
+
+        }
+
+        @media screen and (max-width:526px) {
+            #media {
+                display: none;
             }
-        </style>
-        <title>GurukulHMS</title>
-    </head>
-    
-    <body>
-        <header id="header">
-            <div class="container-fluid" style="display: flex;">
-                <div id="logo" class="col-lg-3 col-md-3 logo"><a href="https://www.gkv.ac.in/"><img
-                            src="../images/logo.png"></a></div>
-                <div id="gkv" class="col-lg-6 col-md-6 U-name text-center"><a href="https://www.gkv.ac.in/"><img
-                            src="../images/gkv-un.png"></a></div>
-                <div id="media" class="col-lg-3 col-md-3 founder text-right"><a href="https://www.gkv.ac.in/"><img
-                            src="../images/gkv-founder.png"></a></div>
-            </div>
-        </header>
-        <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
-            <a style="display: flex;" class="navbar-brand" href="/gkvhms/official/index.html"
-                style="font-size:1.55rem;color:royalblue ;">
-                <img src="../images/GKV.jpg" width="50" height="50" class="d-inline-block rounded-circle" alt="GKV">
-                <p style="color: blueviolet; margin: 10px;">GKV Hostel Management</p>
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>  
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item active" style="font-size: 1.5rem;">
-                        <a class="nav-link" href="/gkvhms/official/index.html#home" >Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item" style="font-size: 1.5rem;">
-                        <a class="nav-link" href="/gkvhms/official/index.html#facilities" >Facilities</a>
-                    </li>
-                    <li class="nav-item" style="font-size: 1.5rem;">
-                        <a class="nav-link" href="/gkvhms/official/index.html#info" >Info</a>
-                    </li>
-                    <li class="nav-item" style="font-size: 1.5rem;">
-                        <a class="nav-link" href="/gkvhms/official/index.html#contact" >Contact</a>
-                    </li>
-                    <li class="nav-item dropdown"style="font-size: 1.5rem;">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ">Login Links</a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="position:absolute; z-index:10;">
-                           <a class="dropdown-item" href="/gkvhms/official/register.php">Student Registration</a>
-                           <div class="dropdown-divider"></div>
-                           <a class="dropdown-item" href="/gkvhms/official/login.php">Admin Login</a>
-                           <a href="/gkvhms/official/employeelogin.php"class="dropdown-item "> Employee Login </a>
-                           <a class="dropdown-item" href="/gkvhms/official/studentlogin.php">Student login</a>
-                        </div>
-                    </li>
-                    <li class="nav-item" style="font-size: 1.5rem;">
-                        <a class="nav-link" href="/gkvhms/official/index.html#Query">Query Box</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <div class="container-fluid" style="overflow:auto;">
+
+            #gkv {
+                display: none;
+            }
+
+            #logo {
+                display: flex;
+                justify-content: center;
+            }
+
+            .textsize {
+                font-size: xx-small;
+            }
+
+        }
+
+        @media screen and (min-width: 527px) and (max-width:660px) {
+            #media {
+                display: none;
+            }
+
+            #logo {
+                display: none;
+            }
+
+            .textsize {
+                font-size: small;
+            }
+
+        }
+
+        @media screen and (min-width: 661px) and (max-width:991px) {
+            #media {
+                display: none;
+            }
+
+            .textsize {
+                font-size: medium;
+            }
+        }
+    </style>
+    <title>GurukulHMS</title>
+</head>
+
+<body>
+    <header id="header">
+        <div class="container-fluid" style="display: flex;">
+            <div id="logo" class="col-lg-3 col-md-3 logo"><a href="https://www.gkv.ac.in/"><img
+                        src="../images/logo.png"></a></div>
+            <div id="gkv" class="col-lg-6 col-md-6 U-name text-center"><a href="https://www.gkv.ac.in/"><img
+                        src="../images/gkv-un.png"></a></div>
+            <div id="media" class="col-lg-3 col-md-3 founder text-right"><a href="https://www.gkv.ac.in/"><img
+                        src="../images/gkv-founder.png"></a></div>
+        </div>
+    </header>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+        <a style="display: flex;" class="navbar-brand" href="/gkvhms/official/index.html"
+            style="font-size:1.55rem;color:royalblue ;">
+            <img src="../images/GKV.jpg" width="50" height="50" class="d-inline-block rounded-circle" alt="GKV">
+            <p style="color: blueviolet; margin: 10px;">GKV Hostel Management</p>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active" style="font-size: 1.5rem;">
+                    <a class="nav-link" href="/gkvhms/official/index.html#home">Home <span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item" style="font-size: 1.5rem;">
+                    <a class="nav-link" href="/gkvhms/official/index.html#facilities">Facilities</a>
+                </li>
+                <li class="nav-item" style="font-size: 1.5rem;">
+                    <a class="nav-link" href="/gkvhms/official/index.html#info">Info</a>
+                </li>
+                <li class="nav-item" style="font-size: 1.5rem;">
+                    <a class="nav-link" href="/gkvhms/official/index.html#holiday">Holidays</a>
+                </li>
+                <li class="nav-item" style="font-size: 1.5rem;">
+                    <a class="nav-link" href="/gkvhms/official/index.html#contact">Contact</a>
+                </li>
+                <li class="nav-item dropdown" style="font-size: 1.5rem;">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ">Login Links</a>
+                        <div class=" dropdown-menu" aria-labelledby="navbarDropdownMenuLink"
+                        style="position:absolute; z-index:10;">
+                        <a class="dropdown-item" href="/gkvhms/official/register.php">Student Registration</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/gkvhms/official/login.php">Admin Login</a>
+                        <a href="/gkvhms/official/employeelogin.php" class="dropdown-item "> Employee Login </a>
+                        <a class="dropdown-item" href="/gkvhms/official/studentlogin.php">Student login</a>
+        </div>
+        </li>
+        <li class="nav-item" style="font-size: 1.5rem;">
+            <a class="nav-link" href="/gkvhms/official/index.html#Query">Query Box</a>
+        </li>
+        </ul>
+        </div>
+    </nav>
+    <div class="container-fluid" style="overflow:auto;">
         <div class="row">
             <div class="col-md-3">
                 <div class="list-group">
                     <a class="list-group-item active navbar-dark bg-danger">DashBoard</a>
                     <a href="/gkvhms/official/login.php" class="list-group-item "> Admin Login</a>
-                    <a href="/gkvhms/official/employeelogin.php"class="list-group-item "> Employee Login </a>
-                    <a href="/gkvhms/official/studentlogin.php"class="list-group-item "> Student Login </a>
+                    <a href="/gkvhms/official/employeelogin.php" class="list-group-item "> Employee Login </a>
+                    <a href="/gkvhms/official/studentlogin.php" class="list-group-item "> Student Login </a>
                     <a href="/gkvhms/official/register.php" class="list-group-item">Register/Apply for Room</a>
-                    <a href="/gkvhms/official/meal.html" class="list-group-item bg-warning" >Meal Info</a>
-                    <a href="/gkvhms/official/hostelfees.html" class="list-group-item " >Hostel Fees Info</a>
+                    <a href="/gkvhms/official/meal.html" class="list-group-item bg-warning">Meal Info</a>
+                    <a href="/gkvhms/official/hostelfees.html" class="list-group-item ">Hostel Fees Info</a>
                     <a href="/gkvhms/official/notice.html" class="list-group-item">Notice Board</a>
                 </div>
                 <hr>
                 <div class="list-group">
-                    <a class="list-group-item active" >Only Admin Access</a>
-                    <a href="/gkvhms/admin/studentlist.php" class="list-group-item " > Student Manage</a>
-                    <a href="/gkvhms/admin/admin.php" class="list-group-item" >Employee Manage</a>
+                    <a class="list-group-item active">Only Admin Access</a>
+                    <a href="/gkvhms/admin/studentlist.php" class="list-group-item "> Student Manage</a>
+                    <a href="/gkvhms/admin/admin.php" class="list-group-item">Employee Manage</a>
                 </div>
             </div>
-            <div class="col-md-9" >
-                <div class="card" >
-                    <h1 style="background-color: hotpink; color: darkred; padding: 10px 5px; text-align: center;">Meal Timetable</h1>
-                    <img style="height: 50rem;" src="../images/meal.jpg" ><a class="btn btn-primary "  href="/gkvhms/images/meal.jpg" download style="font-size: 30px; font-weight: bold;">Download Image</a></div></div></div>
-                    <h1 style="color: darkorchid; text-align: center; border: solid; margin-top: 20px;">Meal Detail</h1>
-                    <h5 class="textsize">In 1992, the USDA recommended that the average adult consume approximately 2,000 calories per day. This included 6-11 servings of grains like rice, pasta, bread, and cereal, along with 3-5 servings of vegetables. In light of new research into American nutrition and lifestyle patterns, the USDA now recommends that not only should we all be eating more vegetables and less bread, but that many of us don't actually need 2,000 calories every day.
-<br>
-                        Calorie and portion size requirements actually vary widely between people of different genders, ages, and activity levels. An NFL linebacker should eat 3,500 calories on game day, but a college sophomore slumped over a term paper might only need half of that. Even in less dramatic comparisons, the difference in how much people should eat is still surprisingly wide: among 19-30 year-olds, for example, the recommended daily intake between men and women differs by nearly 20%.</h5>
-                        <h5 style="color: green;">This Is The Standard Of Food Intake And We Follow This And Provide Food As Per This Standard To Our Students
-                            Because We know That Student Nutrition Should Be Beneficial Because Students Are Our Future. We Also Suggests College students should try to eat two-and-a-half to three cups of veggies and about two cups of fruit per day, throughout the day. Don't let the amount intimidate you; this is equal to 12 baby carrot sticks, a decently sized salad, and two small pieces of fruit. You can also add veggies and fruits to salads or sandwiches. 
-                        </h5>
+            <div class="col-md-9">
+                <div class="card">
+                    <h1 style="background-color: hotpink; color: darkred; padding: 10px 5px; text-align: center;">Meal
+                        Timetable</h1>
+                    <img style="height: 50rem;" src="../images/meal.jpg"><a class="btn btn-primary "
+                        href="/gkvhms/images/meal.jpg" download style="font-size: 20px; font-weight: bold;width:40%;margin: auto;">Download
+                        Image</a>
+                </div>
+            </div>
+        </div>
+        <h1 style="color: darkorchid; text-align: center; border: solid; margin-top: 20px;">Meal Detail</h1>
+        <h5 class="textsize">In 1992, the USDA recommended that the average adult consume approximately 2,000 calories
+            per day. This included 6-11 servings of grains like rice, pasta, bread, and cereal, along with 3-5 servings
+            of vegetables. In light of new research into American nutrition and lifestyle patterns, the USDA now
+            recommends that not only should we all be eating more vegetables and less bread, but that many of us don't
+            actually need 2,000 calories every day.
+            <br>
+            Calorie and portion size requirements actually vary widely between people of different genders, ages, and
+            activity levels. An NFL linebacker should eat 3,500 calories on game day, but a college sophomore slumped
+            over a term paper might only need half of that. Even in less dramatic comparisons, the difference in how
+            much people should eat is still surprisingly wide: among 19-30 year-olds, for example, the recommended daily
+            intake between men and women differs by nearly 20%.</h5>
+        <h5 style="color: green;">This Is The Standard Of Food Intake And We Follow This And Provide Food As Per This
+            Standard To Our Students
+            Because We know That Student Nutrition Should Be Beneficial Because Students Are Our Future. We Also
+            Suggests College students should try to eat two-and-a-half to three cups of veggies and about two cups of
+            fruit per day, throughout the day. Don't let the amount intimidate you; this is equal to 12 baby carrot
+            sticks, a decently sized salad, and two small pieces of fruit. You can also add veggies and fruits to salads
+            or sandwiches.
+        </h5>
     </div>
     <footer style="margin-top:10px; border-top: solid black;border-bottom: solid black;">
         <h5 style="text-align: center;">Copyright © 2020 Gurukula Kangri Vishwavidyalaya. All rights reserved</h5><br>
-          <a style="margin-left: 40%;" href="https://www.facebook.com/gkvharidwar"><img
-              style="height: 30px; border-radius: 50px;" src="../images/facebook'.png" alt="facebook"></a>
-          <a style="margin-left: 2%;"
+        <a style="margin-left: 40%;" href="https://www.facebook.com/gkvharidwar"><img
+                style="height: 30px; border-radius: 50px;" src="../images/facebook'.png" alt="facebook"></a>
+        <a style="margin-left: 2%;"
             href="https://www.linkedin.com/authwall?trk=gf&trkInfo=AQFEcn0EYGoRwwAAAXIE2hKgc_fzaTBXkuUUdKrdwkXcNK99YyaxvWSZgEx7M14ne_wo4-4tS7hFT7M9BVtF58V7yHJuASs6ORn55MZq4hJNaUcJNJ_5HmEQw0DxCFmOGYEgX-c=&originalReferer=https://www.gkv.ac.in/&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fschool%2Fgurukula-kangri-vishwavidyalaya%2F"><img
-              style="height: 30px; border-radius: 50px;" src="../images/linkedin.png" alt="linkedin"></a>
-          <a style="margin-left: 2%;" href="https://twitter.com/gkvsocial"><img style="height: 30px; border-radius: 50px;"
-              src="../images/twitter.png" alt="twitter"></a>
-      </footer>
-                   
-                <!-- Optional JavaScript -->
-                <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-                <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-                    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-                    crossorigin="anonymous"></script>
-                <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-                    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-                    crossorigin="anonymous"></script>
-                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-                    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-                    crossorigin="anonymous"></script>
-            </body>
-            
-            </html>
+                style="height: 30px; border-radius: 50px;" src="../images/linkedin.png" alt="linkedin"></a>
+        <a style="margin-left: 2%;" href="https://twitter.com/gkvsocial"><img style="height: 30px; border-radius: 50px;"
+                src="../images/twitter.png" alt="twitter"></a>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

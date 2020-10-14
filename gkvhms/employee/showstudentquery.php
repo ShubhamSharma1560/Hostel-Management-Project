@@ -96,7 +96,7 @@ if(!isset($_SESSION['signedin']) || $_SESSION['signedin']!=true){
 
       <img src="../images/GKV.jpg" width="50" height="50" class="d-inline-block rounded-circle" alt="GKV">
       <p style="color: blueviolet; margin: 10px;">Staff DashBoard</p>
-    </a> 
+    </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
           </button>  
@@ -108,18 +108,29 @@ if(!isset($_SESSION['signedin']) || $_SESSION['signedin']!=true){
                   <li class="nav-item">
                       <a class="nav-link" href="/gkvhms/employee/employee.php#responsibilities">Responsibilities</a>
                   </li>
+                  <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">Student Queries</a>
+                      <div class=" dropdown-menu" aria-labelledby="navbarDropdownMenuLink"
+            style="position:absolute; z-index:-10;background-color: #231f20;">
+            <a class="nav-link" href="/gkvhms/employee/studentlist.php">Student List</a>
+            <div class="dropdown-divider"></div>
+            <a class="nav-link" href="/gkvhms/employee/showstudentquery.php#suggestion">Student Suggestion</a>
+            <a class="nav-link" href="/gkvhms/employee/showstudentquery.php">Student Complaint</a>   
+    </div>
+    </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/gkvhms/employee/showstudentquery.php#suggestion">Student Suggestion</a>
+                <a class="nav-link" href="/gkvhms/employee/employee.php#fees" >Fees Structure</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/gkvhms/employee/showstudentquery.php">Student Complaint</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="/gkvhms/employee/studentlist.php">Student List</a>
+                <li class="nav-item"">
+                    <a class="nav-link" href="/gkvhms/employee/employee.php#meal" >Meal Timetable</a>
                 </li>
               
                 <li class="nav-item">
                     <a class="nav-link" href="/gkvhms/employee/employee.php#task">Task List</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/gkvhms/employee/employee.php#holiday">Holidays</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/gkvhms/employee/employee.php#details">Hostel Details</a>

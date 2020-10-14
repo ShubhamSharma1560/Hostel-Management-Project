@@ -125,6 +125,9 @@
                         <a class="nav-link" href="/gkvhms/official/index.html#info" >Info</a>
                     </li>
                     <li class="nav-item" style="font-size: 1.5rem;">
+          <a class="nav-link" href="/gkvhms/official/index.html#holiday">Holidays</a>
+        </li>
+                    <li class="nav-item" style="font-size: 1.5rem;">
                         <a class="nav-link" href="/gkvhms/official/index.html#contact">Contact</a>
                     </li>
                     <li class="nav-item dropdown"style="font-size: 1.5rem;">

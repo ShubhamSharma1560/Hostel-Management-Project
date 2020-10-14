@@ -117,12 +117,15 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
                 <li class="nav-item">
                     <a class="nav-link" href="/gkvhms/admin/showquery.php">Official Queries</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/gkvhms/admin/admin.php#holiday">Holidays</a>
+                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ">Student Corner</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="position:absolute; z-index:10;">
                        <a class="dropdown-item" href="/gkvhms/admin/showstudentquery.php">Student Queries</a>
                        <div class="dropdown-divider"></div>
-                       <a class="dropdown-item" href="/gkvhms/admin/admin.php#details">Hostel Details</a>
+                       <a class="dropdown-item" href="/gkvhms/admin/admin.php#detail">Hostel Details</a>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -144,6 +147,7 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
                     <a href="/gkvhms/admin/showquery.php" class="list-group-item">Official Query Box</a>
                     <a href="/gkvhms/admin/admin.php#notice" class="list-group-item">Notice Board</a>
                     <a href="/gkvhms/admin/admin.php#facilities" class="list-group-item">Facilities</a>
+                    <a href="/gkvhms/admin/admin.php#meal" class="list-group-item">Meal Timetable</a>
                     <a href="/gkvhms/official/index.html"target="_blank" class="list-group-item">Official Website</a>
                     
                 </div>

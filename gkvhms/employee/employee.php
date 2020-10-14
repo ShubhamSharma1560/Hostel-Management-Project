@@ -1,8 +1,8 @@
 <?php
 session_start();
 if(!isset($_SESSION['signedin']) || $_SESSION['signedin']!=true){
-  echo "<script type='text/javascript'>window.location.href = '../official/employeelogin.php';</script>";
-  exit();
+    echo "<script type='text/javascript'>window.location.href = '../official/employeelogin.php';</script>";
+    exit();
 }
 ?>
 <!doctype html>
@@ -101,18 +101,29 @@ if(!isset($_SESSION['signedin']) || $_SESSION['signedin']!=true){
                   <li class="nav-item">
                       <a class="nav-link" href="/gkvhms/employee/employee.php#responsibilities">Responsibilities</a>
                   </li>
+                  <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">Student Queries</a>
+                      <div class=" dropdown-menu" aria-labelledby="navbarDropdownMenuLink"
+            style="position:absolute; z-index:-10;background-color: #231f20;">
+            <a class="nav-link" href="/gkvhms/employee/studentlist.php">Student List</a>
+            <div class="dropdown-divider"></div>
+            <a class="nav-link" href="/gkvhms/employee/showstudentquery.php#suggestion">Student Suggestion</a>
+            <a class="nav-link" href="/gkvhms/employee/showstudentquery.php">Student Complaint</a>   
+    </div>
+    </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/gkvhms/employee/showstudentquery.php#suggestion">Student Suggestion</a>
+                <a class="nav-link" href="/gkvhms/employee/employee.php#fees" >Fees Structure</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/gkvhms/employee/showstudentquery.php">Student Complaint</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="/gkvhms/employee/studentlist.php">Student List</a>
+                <li class="nav-item"">
+                    <a class="nav-link" href="/gkvhms/employee/employee.php#meal" >Meal Timetable</a>
                 </li>
               
                 <li class="nav-item">
                     <a class="nav-link" href="/gkvhms/employee/employee.php#task">Task List</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/gkvhms/employee/employee.php#holiday">Holidays</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/gkvhms/employee/employee.php#details">Hostel Details</a>
@@ -195,7 +206,7 @@ if(!isset($_SESSION['signedin']) || $_SESSION['signedin']!=true){
     </div>
   </div>
 </div>
-<h2 style="color:orange; font-weight:bold; text-align:center;"id="responsibilities">Main Responsibilities.</h2>
+<h2 style="color:green; font-weight:bold; text-align:center;"id="responsibilities">Main Responsibilities.</h2>
 <div class="card-group">
   <div class="card">
     <img src="../images/food.jpg" class="card-img-top" alt="...">
@@ -207,6 +218,7 @@ if(!isset($_SESSION['signedin']) || $_SESSION['signedin']!=true){
       <small class="text-muted">Last updated 3 mins ago</small>
     </div>
   </div>
+  
   <div class="card">
     <img src="../images/messclean.jpg" class="card-img-top" alt="...">
     <div class="card-body">
@@ -230,7 +242,12 @@ if(!isset($_SESSION['signedin']) || $_SESSION['signedin']!=true){
 </div>
 </div>
 </div>
-<h1 style="color:green;background-color:skyblue;padding:10px 5px; text-align:center;border:solid;" id="details">Hostel Details</h1>
+<div class="card">
+                <h1 style="color:black;background-color:skyblue; text-align:center;padding:10px 5px;margin-top:1rem;"id="holiday">Holidays Calender</h1>
+                <img src="../images/holiday.jpg" alt="holiday" style="height:100%;width:60%;margin:auto;">
+                <a class="btn btn-primary" href="/gkvhms/images/holiday.jpg" download style=" font-size: 20px; font-weight: bold;width:40%;margin:auto;">Download Image</a>
+  </div>
+<h1 style="color:green;background-color:skyblue;padding:10px 5px; text-align:center;border:solid;margin-top:1rem;" id="details">Hostel Details</h1>
 <div class="table-responsive">
 <table class="table table-hover table-sm table-dark">
   <thead>
@@ -289,37 +306,54 @@ if(!isset($_SESSION['signedin']) || $_SESSION['signedin']!=true){
 </div>
 <h1 style="text-align:center;color:black;background-color: orange; padding:12px 5px;" id="notice">Notices</h1>
 <div class="row">
-<div class="col-md-4">
-                <div class="card" style="width: 18rem;">
+<div class="col-mb-4">
+                <div class="card" style="width: 18rem; margin-left:3rem;">
                     <img src="../images/notice1.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <p class="card-text">When University Annouce Something Related To Hostel We Take As Responsibilities And Manage that By Notices <br> Here This Notice Is Related To To Covid-19 So We Want To Tell YOu That Immediate Go to Your Home And Complete Hostel will Close Till Next Orders.</p>
+                      <p class="card-text">When University Annouce Something Related To Hostel We Take As Responsibilities And Manage that By Notices <br> Here This Notice Is Related To Hostel accommodation all student have to vacate hostel till november 15.</p>
+                      <a class="btn btn-primary" href="/gkvhms/images/notice1.jpg" download >Download Image</a>
                     </div>
                   </div>
-                  <a href="/gkvhms/images/notice1.jpg" download style=" color: chocolate; font-size: 30px; font-weight: bold;">Download Image</a>
+                  
             </div>
-            <div class="col-md-4">
-                <div class="card" style="width: 18rem;">
+            <div class="col-mb-4">
+                <div class="card" style="width: 18rem;margin-left:2rem;">
                     <img src="../images/notice2.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <p class="card-text">Notice Is Related To Annual Exam Here It Tells That Annual Exam Will Held From Mid July.</p>
+                      <p class="card-text">Notice Is Related To UP scholarship Here It Tells That how you can apply for UP scholarship.</p>
+                      <a class="btn btn-primary" href="/gkvhms/images/notice2.jpg" download >Download Image
+                </a>
                     </div>
                   </div>
-                  <a href="/gkvhms/images/notice2.jpg" download style="color: chocolate; font-size: 30px; font-weight: bold;">Download Image
-                </a>
+                 
             </div>
-            <div class="col-md-4">
-                <div class="card" style="width: 18rem;">
+            <div class="col-mb-4">
+                <div class="card" style="width: 18rem;margin-left:2rem;">
                     <img src="../images/notice3.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <p class="card-text">This Notice Is Related To College Fees . So we Provide Every Meeting Decision By Notices Here It Tells That Every Student Have To give fees of Annual Exam.</p>
+                      <p class="card-text">This Notice Is Related To Backlog exam. All student who have backlog will have chance to give offline exam by going to college from 23 november.</p>
+                      <a class="btn btn-primary" href="/gkvhms/images/notice3.jpg" download >Download Image
+                </a>
                     </div>
                   </div>
-                  <a href="/gkvhms/images/notice3.jpg" download style=" color: chocolate; font-size: 30px; font-weight: bold;">Download Image
-                </a>
+                 
             </div>
 </div>
 </div>
+<div class="card">
+                <h1 style="color:black;background-color:skyblue; text-align:center;padding:10px 5px;margin-top:1rem;"id="fees">Fees Structure</h1>
+                <img src="../images/hostelfees.jpg" alt="fees" style="height:100%;width:60%;margin:auto;">
+                <a class="btn btn-primary" href="/gkvhms/images/hostelfees.jpg" download style=" font-size: 20px; font-weight: bold;width:40%;margin:auto;">Download Image</a>
+  </div>
+<div class="card">
+                <h1 style="color:white;background-color:black; margin-top:2rem;text-align:center;padding:10px 5px;"id="meal">Meal Info</h1>
+                <img src="../images/meal.jpg" alt="holiday" style="height:40rem; width:60%; margin:auto;">
+                <a class="btn btn-primary" href="/gkvhms/images/meal.jpg" download style=" font-size: 20px; font-weight: bold; width:40%;margin:auto;">Download Image</a>
+               </div>
+               <h2 style="color: brown; text-align: center; border: solid red; background-color:skyblue; margin-top:20px;">Meal Detail</h2>
+               <h5 class="textsize" style="color:red;"> We Follow  Foood Nutririon Standard And Provide Food As Per This Standard To Our Students
+                            Because We know That Student Nutrition Should Be Beneficial Because Students Are Our Future. We Also Suggests Our students should try to eat two-and-a-half to three cups of veggies and about two cups of fruit per day, throughout the day. Don't let the amount intimidate you; this is equal to 12 baby carrot sticks, a decently sized salad, and two small pieces of fruit. You can also add veggies and fruits to salads or sandwiches. 
+                        </h5>
 <h1 style="color:green;background-color:skyblue;padding:10px 5px; margin-top:20px; text-align:center;border:solid;" id="task">Daily Duties</h1>
 <div class="table-responsive">
 <table class="table table-hover table-sm table-dark">

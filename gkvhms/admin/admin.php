@@ -126,6 +126,9 @@ if(!isset($_SESSION['loggedin']))
                 <li class="nav-item">
                     <a class="nav-link" href="/gkvhms/admin/showquery.php">Official Queries</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/gkvhms/admin/admin.php#holiday">Holidays</a>
+                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ">Student Corner</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="position:absolute; z-index:10;">
@@ -153,6 +156,7 @@ if(!isset($_SESSION['loggedin']))
                     <a href="/gkvhms/admin/showquery.php" class="list-group-item">Official Query Box</a>
                     <a href="/gkvhms/admin/admin.php#notice" class="list-group-item">Notice Board</a>
                     <a href="/gkvhms/admin/admin.php#facilities" class="list-group-item">Facilities</a>
+                    <a href="/gkvhms/admin/admin.php#meal" class="list-group-item">Meal Timetable</a>
                     <a href="/gkvhms/official/index.html" target="_blank"class="list-group-item">Official Website</a>
                     
                 </div>
@@ -333,12 +337,12 @@ if(!isset($_SESSION['loggedin']))
 </table>
 </div>
 <h1 style="text-align:center;color:black;background-color: orange; padding:12px 5px;" id="notice">Notices</h1>
-<div class="row">
-<div class="col-mb-4" style="margin-left:2rem;">
+<div class="row" style="margin:auto;text-align:center;">
+<div class="col-mb-4" style="margin-left:3rem;">
                 <div class="card" style="width: 18rem;">
                     <img src="../images/notice1.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <p class="card-text">When University Annouce Something Related To Hostel We Take As Responsibilities And Manage that By Notices <br> Here This Notice Is Related To To Covid-19 So We Want To Tell You That Immediate Go to Your Home And Complete Hostel will Remain Close Till Next Orders.</p>
+                      <p class="card-text">When University Annouce Something Related To Hostel We Take As Responsibilities And Manage that By Notices <br> Here This Notice Is Related To Hostel accommodation all student have to vacate hostel till november 15. </p>
                       <a class="btn btn-primary" href="/gkvhms/images/notice1.jpg" download >Download Image</a>
                     </div>
                   </div>
@@ -348,7 +352,7 @@ if(!isset($_SESSION['loggedin']))
                 <div class="card" style="width: 18rem;">
                     <img src="../images/notice2.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <p class="card-text">Notice Is Related To Annual Exam Here It Tells That Annual Exam Will Held From Mid July.</p>
+                      <p class="card-text">Notice Is Related To UP scholarship Here It Tells That how you can apply for UP scholarship.</p>
                       <a class="btn btn-primary" href="/gkvhms/images/notice2.jpg" download >Download Image
                 </a>
                     </div>
@@ -359,15 +363,31 @@ if(!isset($_SESSION['loggedin']))
                 <div class="card" style="width: 18rem;">
                     <img src="../images/notice3.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <p class="card-text">This Notice Is Related To College Fees . So we Provide Every Meeting Decision By Notices Here It Tells That Every Student Have To give fees of Annual Exam.</p>
+                      <p class="card-text">This Notice Is Related To Backlog exam. All student who have backlog will have chance to give offline exam by going to college from 23 november.</p>
                       <a class="btn btn-primary" href="/gkvhms/images/notice3.jpg" download >Download Image
                 </a>
                     </div>
                   </div>
                  
             </div>
+           
 </div>
+
 </div>
+<div class="card" >
+                <h1 style="color:black;background-color:skyblue;text-align:center;padding:10px 5px;margin-top:1rem;"id="holiday">Holidays Calender</h1>
+                <img src="../images/holiday.jpg" alt="holiday" style="align-items:center;width:60%;margin:auto;">
+                <a class="btn btn-primary" href="/gkvhms/images/holiday.jpg" download style=" font-size: 20px; font-weight: bold;width:40%;margin:auto;">Download Image</a>
+               </div>
+               <div class="card">
+                <h1 style="color:white;background-color:black; margin-top:2rem;text-align:center;padding:10px 5px;"id="meal">Meal Info</h1>
+                <img src="../images/meal.jpg" alt="holiday" style="height:40rem; width:60%; margin:auto;">
+                <a class="btn btn-primary" href="/gkvhms/images/meal.jpg" download style=" font-size: 20px; font-weight: bold; width:40%;margin:auto;">Download Image</a>
+               </div>
+               <h2 style="color: brown; text-align: center; border: solid red; background-color:skyblue; margin-top:20px;">Meal Detail</h2>
+               <h5 class="textsize" style="color:red;"> We Follow  Foood Nutririon Standard And Provide Food As Per This Standard To Our Students
+                            Because We know That Student Nutrition Should Be Beneficial Because Students Are Our Future. We Also Suggests Our students should try to eat two-and-a-half to three cups of veggies and about two cups of fruit per day, throughout the day. Don't let the amount intimidate you; this is equal to 12 baby carrot sticks, a decently sized salad, and two small pieces of fruit. You can also add veggies and fruits to salads or sandwiches. 
+                        </h5>
 <footer style="margin-top:10px; border-top: solid black;border-bottom: solid black;">
       <h5 style="text-align: center;">Copyright © 2020 Gurukula Kangri Vishwavidyalaya. All rights reserved</h5><br>
         <a style="margin-left: 40%;" href="https://www.facebook.com/gkvharidwar"><img

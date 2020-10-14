@@ -261,16 +261,16 @@ if(!isset($_SESSION['login']) || $_SESSION['login']!=true)
   </div>
 </div>
 </div>
-              <div class="card">
-                <h1 style="color:black;background-color:skyblue; text-align:center;padding:10px 5px;"id="holiday">Holidays Calender</h1>
-                <img src="../images/holiday.jpg" alt="holiday" style="height:100%;">
-                <a class="btn btn-primary" href="/gkvhms/images/holiday.jpg" download style=" font-size: 30px; font-weight: bold;">Download Image</a>
+              <div class="card" >
+                <h1 style="color:black;background-color:skyblue;text-align:center;padding:10px 5px;margin-top:1rem; "id="holiday">Holidays Calender</h1>
+                <img src="../images/holiday.jpg" alt="holiday" style="height:100%;width:60%;margin:auto;">
+                <a class="btn btn-primary" href="/gkvhms/images/holiday.jpg" download style=" font-size: 20px; font-weight: bold; width:40%;margin:auto;">Download Image</a>
                </div>
       </div>
             <div class="card">
                 <h1 style="color:white;background-color:black; margin-top:2rem;text-align:center;padding:10px 5px;"id="meal">Meal Info</h1>
-                <img src="../images/meal.jpg" alt="holiday" style="height:45rem;">
-                <a class="btn btn-primary" href="/gkvhms/images/meal.jpg" download style=" font-size: 30px; font-weight: bold;">Download Image</a>
+                <img src="../images/meal.jpg" alt="holiday" style="height:40rem; width:60%; margin:auto;">
+                <a class="btn btn-primary" href="/gkvhms/images/meal.jpg" download style=" font-size: 20px; font-weight: bold; width:40%;margin:auto;">Download Image</a>
                </div>
                <h1 style="color: brown; text-align: center; border: solid; background-color:skyblue; margin-top:20px;">Meal Detail</h1>
                <h5 class="textsize" style="color:green;"> We Follow  Foood Nutririon Standard And Provide Food As Per This Standard To Our Students
@@ -282,7 +282,7 @@ if(!isset($_SESSION['login']) || $_SESSION['login']!=true)
                 <div class="card" style="width: 18rem;">
                     <img src="../images/notice1.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <p class="card-text">When University Annouce Something Related To Hostel We Take As Responsibilities And Manage that By Notices <br> Here This Notice Is Related ToCovid-19 So We Want To Tell You That Immediate Go to Your Home And Complete Hostel will Close Till Next Orders.</p>
+                      <p class="card-text">When University Annouce Something Related To Hostel We Take As Responsibilities And Manage that By Notices <br> Here This Notice Is Related To Hostel accommodation all student have to vacate hostel till november 15.</p>
                       <a class="btn btn-primary"href="/gkvhms/images/notice1.jpg" download>Download Image</a>
                     </div>
                   </div>
@@ -292,7 +292,7 @@ if(!isset($_SESSION['login']) || $_SESSION['login']!=true)
                 <div class="card" style="width: 18rem;">
                     <img src="../images/notice2.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <p class="card-text">Notice Is Related To Annual Exam Here It Tells That Annual Exam Will Held From Mid July.</p>
+                      <p class="card-text">Notice Is Related To UP scholarship Here It Tells That how you can apply for UP scholarship.</p>
                       <a class="btn btn-primary"href="/gkvhms/images/notice2.jpg" download>Download Image
                 </a>
                     </div>
@@ -303,7 +303,7 @@ if(!isset($_SESSION['login']) || $_SESSION['login']!=true)
                 <div class="card" style="width: 18rem;">
                     <img src="../images/notice3.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <p class="card-text">This Notice Is Related To College Fees . So we Provide Every Meeting Decision By Notices Here It Tells That Every Student Have To give fees of Annual Exam.</p>
+                      <p class="card-text">This Notice Is Related To Backlog exam. All student who have backlog will have chance to give offline exam by going to college from 23 november.</p>
                       <a class="btn btn-primary" href="/gkvhms/images/notice3.jpg" download>Download Image
                 </a>
                     </div>
