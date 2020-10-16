@@ -18,7 +18,7 @@
  [Click Here](https://gkvhms.000webhostapp.com/)
  
  # Image
- ![Screenshot](https://github.com/Raj77230/Hostel-Management-Project/blob/master/Screenshot%20(118).png)
+ ![Screenshot](https://github.com/Raj77230/Hostel-Management-Project/blob/master/Screenshot%20(119).png)
  
  TO CREATE THIS PROJECT  IT TAKES 10 DAYS OF CONTINUOUS WORK . VERY HARDWORKING PROJECT and enjoyable project
  
