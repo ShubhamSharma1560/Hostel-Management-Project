@@ -15,7 +15,7 @@
  THEN ENJOY !
  
  # LIVE DEMO
- [Click Here](https://gkvhms.000webhostapp.com/)
+ [Click Here](http://devshubham.tk)
  
  # Image
  ![Screenshot](https://github.com/Raj77230/Hostel-Management-Project/blob/master/demoimage.png)
