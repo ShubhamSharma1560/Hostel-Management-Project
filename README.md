@@ -18,7 +18,7 @@
  [Click Here](http://devshubham.tk)
  
  # Image
- ![Screenshot](https://github.com/Raj77230/Hostel-Management-Project/blob/master/demoimage.png)
+ ![Screenshot](https://github.com/ShubhamSharma1560/Hostel-Management-Project/blob/master/demoimage.png)
  
  TO CREATE THIS PROJECT  IT TAKES 10 DAYS OF CONTINUOUS WORK . VERY HARDWORKING PROJECT and enjoyable project
  
