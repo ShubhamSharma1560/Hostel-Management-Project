@@ -70,7 +70,7 @@ CREATE TABLE `allotedstudent` (
 --
 
 INSERT INTO `allotedstudent` (`SerialNo`, `FirstName`, `LastName`, `FatherName`, `Address`, `ParentMobNo`, `Email`, `DOB`, `Contact`, `Category`, `Marks`, `Username`, `passcode`, `Branch`, `YearOfStudy`, `Hostel`) VALUES
-(1, 'SHUBHAM', 'SHARMA', 'KUSHAL KUMAR', 'VILL. DODAN P.O. BHARMOTI TEHSIL NADAUN DISTT. HAMIRPUR (HP)', '9501492122', 'shubham.sharma1560@gmail.com', '2001-03-24', '8580509997', 'GEN', '90', 'Shubham1560@', 'dad45000a912769a1c3e65ad9337d6be', 'CSE', 'Second Year', 'Pt. Lekhram Hostel');
+(1, 'SHUBHAM', 'SHARMA', 'XYZ', 'Abc', '1234567892', 'shubham.sharma1560@gmail.com', '1999-9-19', '8580509780', 'GEN', '90', 'sgsgsgg', 'dad45000a912769a1c3e65ad9337d6be', 'CSE', 'Second Year', 'Pt. Lekhram Hostel');
 
 -- --------------------------------------------------------
 
@@ -174,7 +174,7 @@ CREATE TABLE `registration` (
 --
 
 INSERT INTO `registration` (`SerialNo`, `FirstName`, `LastName`, `FatherName`, `Address`, `ParentMobNo`, `Email`, `DOB`, `Contact`, `Category`, `Marks`, `Username`, `passcode`, `Branch`, `YearOfStudy`, `Hostel`) VALUES
-(1, 'SHUBHAM', 'SHARMA', 'KUSHAL KUMAR', 'VILL. DODAN P.O. BHARMOTI TEHSIL NADAUN DISTT. HAMIRPUR (HP)', '9501492122', 'shubham.sharma1560@gmail.com', '2001-03-24', '8580509997', 'GEN', '90', 'Shubham1560@', 'dad45000a912769a1c3e65ad9337d6be', 'CSE', 'Second Year', 'Pt. Lekhram Hostel');
+(1, 'SHUBHAm', 'SHARMA', 'DFG', 'Abc', '9501490900', 'shubham.sharma1560@gmail.com', '2001-03-24', '8581537807', 'GEN', '90', 'Shubham1560@', 'dad45000a912769a1c3e65ad9337d6be', 'CSE', 'Second Year', 'Pt. Lekhram Hostel');
 
 -- --------------------------------------------------------
 
